@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1AE4B00C-508A-4AF4-930F-157CEDD8184E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="tms_web_core\iss_demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="fmx\issdemo_fmx.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="vcl\iss_demo_vcl.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="iss_demo">
+        <MSBuild Projects="tms_web_core\iss_demo.dproj"/>
+    </Target>
+    <Target Name="iss_demo:Clean">
+        <MSBuild Projects="tms_web_core\iss_demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="iss_demo:Make">
+        <MSBuild Projects="tms_web_core\iss_demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="issdemo_fmx">
+        <MSBuild Projects="fmx\issdemo_fmx.dproj"/>
+    </Target>
+    <Target Name="issdemo_fmx:Clean">
+        <MSBuild Projects="fmx\issdemo_fmx.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="issdemo_fmx:Make">
+        <MSBuild Projects="fmx\issdemo_fmx.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="iss_demo_vcl">
+        <MSBuild Projects="vcl\iss_demo_vcl.dproj"/>
+    </Target>
+    <Target Name="iss_demo_vcl:Clean">
+        <MSBuild Projects="vcl\iss_demo_vcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="iss_demo_vcl:Make">
+        <MSBuild Projects="vcl\iss_demo_vcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="iss_demo;issdemo_fmx;iss_demo_vcl"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="iss_demo:Clean;issdemo_fmx:Clean;iss_demo_vcl:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="iss_demo:Make;issdemo_fmx:Make;iss_demo_vcl:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

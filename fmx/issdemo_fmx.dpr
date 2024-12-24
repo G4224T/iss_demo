@@ -1,11 +1,6 @@
 program issdemo_fmx;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
   System.StartUpCopy,
   FMX.Forms,
   Unit1 in 'Unit1.pas' {Form1},

@@ -1,11 +1,6 @@
 program iss_demo_vcl;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
   Vcl.Forms,
   Unit1 in 'Unit1.pas' {Form1},
   Vcl.Themes,

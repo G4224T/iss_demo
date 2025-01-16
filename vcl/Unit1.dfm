@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Where is the International Space Station?'
-  ClientHeight = 959
-  ClientWidth = 1256
+  ClientHeight = 1126
+  ClientWidth = 1576
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -936,8 +936,8 @@ object Form1: TForm1
   object TMSFNCMaps1: TTMSFNCMaps
     Left = 0
     Top = 41
-    Width = 1256
-    Height = 918
+    Width = 1576
+    Height = 1085
     Align = alClient
     ParentDoubleBuffered = False
     DoubleBuffered = True
@@ -950,19 +950,21 @@ object Form1: TForm1
     ElementContainers = <>
     Labels = <>
     HeadLinks = <>
-    Options.DefaultLatitude = 40.689247000000000000
-    Options.DefaultLongitude = -74.044502000000000000
+    Options.DefaultLongitude = -74.044502000000010000
     Options.DefaultZoomLevel = 12.000000000000000000
     Service = msOpenLayers
     LocalFileAccess = True
+    ExplicitWidth = 1246
+    ExplicitHeight = 886
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1256
+    Width = 1576
     Height = 41
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 1246
     object FindISSButton: TButton
       AlignWithMargins = True
       Left = 4
